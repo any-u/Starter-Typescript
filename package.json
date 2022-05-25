@@ -1,0 +1,38 @@
+{
+  "name": "starter-typescript",
+  "version": "0.0.1",
+  "description": "Starter template for Typescript",
+  "license": "MIT",
+  "author": "any-u",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/any-u/Starter-Typescript.git"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/any-u/Starter-Typescript/issues"
+  },
+  "homepage": "https://github.com/any-u/Starter-Typescript#readme",
+  "scripts": {
+    "build": "rimraf dist && tsup src/index.ts --format cjs,esm --dts"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.0",
+    "tslib": "^2.4.0",
+    "tsup": "^5.12.9",
+    "typescript": "^4.7.2"
+  }
+}
